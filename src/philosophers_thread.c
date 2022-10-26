@@ -6,7 +6,7 @@
 /*   By: cdalla-s <cdalla-s@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 11:58:45 by cdalla-s      #+#    #+#                 */
-/*   Updated: 2022/10/26 10:49:36 by cdalla-s      ########   odam.nl         */
+/*   Updated: 2022/10/26 12:34:05 by cdalla-s      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,12 +77,3 @@ void	sleep_f(t_philo *philo)
 	print_f("%u %d is thinking\n", philo);
 	start_routine(philo);
 }
-
-//philo grab the fork then wait until time to die
-// void	start_solo_meal(t_philo *philo)
-// {
-// 	grab_forks(philo, philo->num - 1);
-// 	f_usleep(philo->t->t_to_die, philo);
-// 	print_f("%u &d died\n", philo);
-// 	return ;
-// }

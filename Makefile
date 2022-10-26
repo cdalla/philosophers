@@ -11,12 +11,14 @@ OBJ :=	obj/philosophers.o\
 		obj/philosophers_thread.o\
 		obj/utils.o\
 		obj/input.o\
+		obj/routine.o\
 
 SRC :=	philosophers.c\
 		philosophers_thread.c\
 		philosophers_check.c\
 		utils.c\
 		input.c\
+		routine.c\
 
 all: $(NAME)
 	
