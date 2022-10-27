@@ -6,10 +6,9 @@
 /*   By: cdalla-s <cdalla-s@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 14:51:21 by cdalla-s      #+#    #+#                 */
-/*   Updated: 2022/10/27 10:41:18 by cdalla-s      ########   odam.nl         */
+/*   Updated: 2022/10/27 12:09:27 by cdalla-s      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "philosophers.h"
 
