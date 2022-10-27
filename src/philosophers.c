@@ -6,24 +6,10 @@
 /*   By: cdalla-s <cdalla-s@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 14:51:21 by cdalla-s      #+#    #+#                 */
-/*   Updated: 2022/10/26 13:19:17 by cdalla-s      ########   odam.nl         */
+/*   Updated: 2022/10/27 10:41:18 by cdalla-s      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-
-	USE A MUTEX TO CHECK FORK STATE INSTEAD OF STAY PENDING
-	
-	eat funct call sleep funct
-	sleep funct recall sleep funct
-
-
-	USE A MUTEX TO STOP THE PHILOS UNTIL ALL THE THREADS HAS BEEN CREATED
-
-	CHECK THE NUMBER OF THREADS CREATED AND STOP THE PROGRAM IF SOME THREADS
-	FAILED
-	STOP THE ROUTINE FUNCTION BEFORE IT STARTS IF A THREAD CREATION FAILS
-*/
 
 #include "philosophers.h"
 
