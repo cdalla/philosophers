@@ -6,7 +6,7 @@
 /*   By: cdalla-s <cdalla-s@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 14:49:17 by cdalla-s      #+#    #+#                 */
-/*   Updated: 2022/10/26 13:21:30 by cdalla-s      ########   odam.nl         */
+/*   Updated: 2022/10/29 12:41:23 by cdalla-s      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ typedef struct s_philo
 {
 	pthread_t		thread;
 	int				num;
-	int				state;
 	int				n_meals;
 	uint32_t		last_meal;
 	struct s_table	*t;
@@ -78,6 +77,6 @@ void		free_forks(t_philo *philo);
 //THREADS
 int			generate_threads(t_table *t);
 void		destroy_threads(t_table *t);
-void		initial_info(t_table *t);
+int			initial_info(t_table *t);
 
 #endif

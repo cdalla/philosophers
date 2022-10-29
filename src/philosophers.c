@@ -6,37 +6,41 @@
 /*   By: cdalla-s <cdalla-s@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 14:51:21 by cdalla-s      #+#    #+#                 */
-/*   Updated: 2022/10/27 12:09:27 by cdalla-s      ########   odam.nl         */
+/*   Updated: 2022/10/29 12:44:51 by cdalla-s      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosophers.h"
 
-void	initial_info(t_table *t)
+int	initial_info(t_table *t)
 {
 	int	i;
 
 	i = 0;
-	pthread_mutex_init(&t->start, NULL);
-	pthread_mutex_init(&t->t_acc, NULL);
-	pthread_mutex_init(&t->printf, NULL);
+	if (pthread_mutex_init(&t->start, NULL)
+		|| pthread_mutex_init(&t->t_acc, NULL)
+		|| pthread_mutex_init(&t->printf, NULL))
+		return (0);
 	while (i < t->n_philos)
 	{
-		pthread_mutex_init(&t->fork[i], NULL);
-		pthread_mutex_init(&t->fork_av[i], NULL);
+		if (pthread_mutex_init(&t->fork[i], NULL)
+			|| pthread_mutex_init(&t->fork_av[i], NULL))
+			return (0);
 		t->philo[i].num = i + 1;
 		t->philo[i].n_meals = 0;
 		t->philo[i].last_meal = t->born_t;
 		t->philo[i].t = t;
 		i++;
 	}
+	return (1);
 }
 
 int	generate_threads(t_table *t)
 {
 	int	i;
 
-	initial_info(t);
+	if (!initial_info(t))
+		return (0);
 	i = 0;
 	t->th_created = 0;
 	pthread_mutex_lock(&t->start);
